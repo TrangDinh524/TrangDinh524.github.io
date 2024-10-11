@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import './navbar.css';
 import { Button } from '../Button/button'
 
-function Navbar() {
+
+function Navbar({ toggleTheme, theme }) {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
@@ -53,7 +54,14 @@ function Navbar() {
                 </li>
             ))}
             </ul>
-          {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+          {/* {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>} */}
+          <button onClick={toggleTheme} className="theme-toggle-btn">
+          {theme === 'light' ? (
+            <i className='fa-regular fa-moon' style={{ color: 'white' }}></i>
+          ) : (
+            <i className='fa-regular fa-sun'></i>
+          )}
+          </button>
         </div>
       </nav>
     </>

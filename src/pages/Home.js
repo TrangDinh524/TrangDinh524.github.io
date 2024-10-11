@@ -3,9 +3,9 @@ import React from 'react';
 // import Cards from '../Cards';
 import About from './About';
 import Homepage from './Homepage';
-
+import Project from './Project';
 import Footer from '../Footer/footer';
-import Content from '../Content/content';
+// import Content from '../Content/content';
 
 function Home() {
     return (
@@ -13,7 +13,8 @@ function Home() {
         {/* <Cards /> */}
         <Homepage />
         <About />
-        <Content />
+        {/* <Content /> */}
+        <Project />
         <Footer /> 
       </>
     );

@@ -4,6 +4,8 @@ import React from 'react';
 import About from './About';
 import Homepage from './Homepage';
 import Project from './Project';
+import Contact from './Contact';
+
 import Footer from '../Footer/footer';
 // import Content from '../Content/content';
 
@@ -15,6 +17,7 @@ function Home() {
         <About />
         {/* <Content /> */}
         <Project />
+        <Contact />
         <Footer /> 
       </>
     );

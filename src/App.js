@@ -8,14 +8,20 @@ import Project from './pages/Project';
 import Contact from './pages/Contact';
 
 function App() {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
 
   useEffect(() => {
-    const choseTheme = localStorage.getItem('theme');
-    if (choseTheme) {
-      setTheme(choseTheme);
-      document.body.className = choseTheme; // set initial theme class
+    let choseTheme = localStorage.getItem('theme');
+    console.log("Initial theme:", choseTheme);
+
+    if (!choseTheme) {
+      choseTheme = 'dark'; // Set a default theme if none is found
+      localStorage.setItem('theme', choseTheme); // Store the default theme
     }
+    setTheme(choseTheme);
+    document.body.className = choseTheme; // Set initial theme class
+    console.log("Chosen theme:", choseTheme);
+
   }, []);
 
   const toggleTheme = () => {

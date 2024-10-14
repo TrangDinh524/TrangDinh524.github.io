@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import '../App.css';
+import emailjs from 'emailjs-com';
+
 
 function Contact() {
     const [formData, setFormData] = useState({
@@ -21,6 +23,15 @@ function Contact() {
         e.preventDefault();
         // Handle form submission logic here, such as sending the data to an API
         console.log('Form submitted:', formData);
+
+        emailjs.send('trang_personalweb', 'template_qsd7asm', formData, 'Xxzdoq1XUDDRZbxm9')
+        .then((response) => {
+            console.log('Success!', response.status, response.text);
+            // Optionally reset the form or show a success message here
+        })
+        .catch((error) => {
+            console.error('Error sending email:', error);
+        });
     };
 
     return (
@@ -41,7 +52,7 @@ function Contact() {
                         <i className="far fa-envelope contact-icon"></i>
                         <div>
                             <h3 className="contact-title">Email</h3>
-                            <span className="contact-subtitle">dinhtrang.5204@gmail.com</span>
+                            <span className="contact-subtitle"><a href="mailto:dinhtrang.5204@gmail.com">dinhtrang.5204@gmail.com</a></span>
                         </div>
                     </div>
                     <div className="contact-information">
@@ -109,7 +120,7 @@ function Contact() {
                         <p className="contact__message" id="contact-message"></p>
                     </div>
                     <div className="contact-button">
-                        <button type="submit" className="button button-flex">
+                        <button type="submit" className="btn-container btn">
                             Send Message <i className="fab fa-telegram-plane button-icon"></i>
                         </button>
                     </div>

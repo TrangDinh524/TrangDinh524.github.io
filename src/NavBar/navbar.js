@@ -15,9 +15,9 @@ function Navbar({ toggleTheme, theme }) {
   const navItems = [
     { to: '/', label: 'Home', className: 'nav-links' },
     { to: '/about', label: 'About', className: 'nav-links' },
-    { to: '/portfolio', label: 'Portfolio', className: 'nav-links' },
+    { to: '/project', label: 'Project', className: 'nav-links' },
     { to: '/contact', label: 'Contact', className: 'nav-links' },
-    { to: '/sign-up', label: 'Sign Up', className: 'nav-links-mobile' },
+    // { to: '/sign-up', label: 'Sign Up', className: 'nav-links-mobile' },
   ];
 
   const showButton = () => {
@@ -28,9 +28,9 @@ function Navbar({ toggleTheme, theme }) {
     }
   };
 
-//   useEffect(() => {
-//     showButton();
-//   }, []);
+  useEffect(() => {
+    showButton();
+  }, []);
 
   window.addEventListener('resize', showButton);
 
@@ -59,7 +59,7 @@ function Navbar({ toggleTheme, theme }) {
           {theme === 'light' ? (
             <i className='fa-regular fa-moon' style={{ color: 'white' }}></i>
           ) : (
-            <i className='fa-regular fa-sun'></i>
+            <i className='fa-regular fa-sun' style={{ color: 'white' }}></i>
           )}
           </button>
         </div>

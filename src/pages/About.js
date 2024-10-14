@@ -16,11 +16,11 @@ function About() {
 
     return (
       <>
-        <section data-aos="fade-up" className="about" id="about">
+        <section data-aos="fade-up" className="section about" id="about">
             <h2 className="section-title">About Me</h2>
             <span className="section-subtitle">My introduction</span>
 
-            <div class="profile-container">
+            <div class="profile-container container">
                 <img src='/profile_image.jpg'
                 style={{
                     width: 400, // Adjust the size as needed
@@ -55,7 +55,7 @@ function About() {
             </div>
         </section>
 
-        <section data-aos="fade-up" className = "qualification">
+        <section data-aos="fade-up" className = "section qualification">
           <h2 class="section-title">Qualification</h2>
           <span className="section-subtitle">My journey</span>
 

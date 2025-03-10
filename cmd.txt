@@ -1,0 +1,5 @@
+command to run:
+
+local host: npm start
+
+deploy: npm run deploy

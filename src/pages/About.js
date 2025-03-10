@@ -21,7 +21,7 @@ function About() {
             <span className="section-subtitle">My introduction</span>
 
             <div class="profile-container container">
-                <img src='/profile_image.jpg'
+                <img src='images/profile_image.jpg'
                 style={{
                     width: 400, // Adjust the size as needed
                     height: 400,
@@ -41,13 +41,10 @@ function About() {
                     I thrive in collaborative environments and am always eager to apply my knowledge in cutting-edge technologies to drive impactful results.
                     </p>
                     <div className="btn-container">
-                    <button
-                        class="btn"
-                        onClick={() => window.open('./myResume.pdf')}
-                    >
+                    <button className = "btn-effect" onClick={() => window.open('./myResume.pdf')}>
                         Download CV
                     </button>
-                    <button class="btn">
+                    <button className = "btn-effect" onClick={() => window.location.href = '#contact'}>
                         Contact Info
                     </button>
                     </div>

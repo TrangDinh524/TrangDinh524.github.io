@@ -28,9 +28,11 @@ function Contact() {
         .then((response) => {
             console.log('Success!', response.status, response.text);
             // Optionally reset the form or show a success message here
+            alert('Your message has been sent! I will reply as soon as possible. Thank you for your patience!');
         })
         .catch((error) => {
             console.error('Error sending email:', error);
+            alert('Failed to submit form. Please try again later.');
         });
     };
 
@@ -120,7 +122,7 @@ function Contact() {
                         <p className="contact__message" id="contact-message"></p>
                     </div>
                     <div className="contact-button">
-                        <button type="submit" className="btn-container btn">
+                        <button type="submit" className="btn-container btn-effect">
                             Send Message <i className="fab fa-telegram-plane button-icon"></i>
                         </button>
                     </div>

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './navbar.css';
 import { Button } from '../Button/button'
@@ -38,7 +37,7 @@ function Navbar({ toggleTheme, theme }) {
     <>
       <nav className='navbar'>
         <div className='navbar-container'>
-          <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+          <Link to='/' className='navbar-logo dynapuff-semibold' onClick={closeMobileMenu}>
             Trang
             <i className="fa-regular fa-face-laugh-beam" style={{ marginLeft: '10px' }}></i>
             </Link>

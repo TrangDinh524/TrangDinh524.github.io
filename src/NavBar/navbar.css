@@ -1,5 +1,5 @@
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
-
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Modak&display=swap');
 .navbar {
     background: var(--navbar-bg-color);
     height: 80px;
@@ -12,6 +12,19 @@
     z-index: 999;
     width: 100%; 
 
+  }
+  .modak-regular {
+    font-family: "Modak", system-ui;
+    font-weight: 10;
+    font-style: normal;
+  }
+  .dynapuff-semibold {
+    font-family: "DynaPuff", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
   }
   
   .navbar-container {
@@ -47,6 +60,12 @@
     width: 60vw;
     justify-content: end;
     margin-right: 2rem;
+    font-family: "DynaPuff", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
   }
   
   /* .nav-item {
